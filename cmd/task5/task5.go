@@ -34,7 +34,7 @@ func main() {
 		}
 	}(ch)
 
-	// Воркеры, которые читают данные из канала и выводят в stdout
+	// Горутина, которая читает данные из канала и выводит их в stdout
 	waitGroup.Add(1)
 	go func(ch <-chan string) {
 		defer waitGroup.Done()
